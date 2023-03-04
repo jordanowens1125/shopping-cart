@@ -1,0 +1,35 @@
+#catalog{
+    border:red 1px solid;
+    display: grid;
+    grid-template-columns: 150px 400px;
+}
+#items{
+    list-style: none;
+    background-color:#1c285a;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    color: #878aa4;
+    gap: 5px;
+}
+
+.item *{
+    text-decoration: none;
+}
+
+.item div{
+    height: 250px;
+    width: 250px;
+    background-color:#19224c;
+    background-position: center;
+    background-size: cover;
+}
+
+#sort{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
