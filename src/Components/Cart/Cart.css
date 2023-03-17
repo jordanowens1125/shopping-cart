@@ -1,21 +1,29 @@
 #cart{
-    position: fixed;
+    position: absolute;
     top:0;
-    height:100vh;
+    height:100%;
     width:200px;
-    border: solid 1px black;
-    right: -200px;
+    right: -250px;
     transition: right 0.6s;
-    z-index:3;
+    z-index:100;
     padding-top: 100px;
-    background-color: black;
-    color: white;
+    background-color: var(--lighter-bg-color);
+    color: var(--white);
+    display: none;
+    transition: 1s;
 }
 
 #cart.open{
     right:0;
+    display: inline;
+}
+
+#cart button{
+    background-color: var(--primary-color);
+    padding: 5px;
+    border: none;
 }
 
 #cart *{
-    color: white;
+    color: var(--white);
 }

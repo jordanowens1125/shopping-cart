@@ -43,7 +43,8 @@ const Cart = () => {
     <>
       <div id='cart' ref={impactRef}>
         Cart
-        {
+        <ul>
+          {
           cart.cart.map((item,index)=>
             <li key={index}>
                 <p>{item.title}</p>
@@ -53,7 +54,11 @@ const Cart = () => {
             </li>
           )
         }
-        <div>${total.toFixed(2)}</div>
+        </ul>
+        
+        <div>
+          ${total.toFixed(2)}
+        </div>
         <div>
           <Link to={'/checkout'}>Checkout</Link>
         </div>

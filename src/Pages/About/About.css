@@ -1,0 +1,12 @@
+#About{
+    height: 100vh;
+    background-image: url('../../Assets/about-car.jpg');
+    /* Source img  https://wallpaperaccess.com/full/1179614.jpg */
+    background-size: cover;
+    color: var(--white);
+    justify-content: center;
+}
+
+#About h2{
+    color: var(--primary-color);
+}

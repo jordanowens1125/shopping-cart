@@ -1,11 +1,15 @@
-.Product{
-    position: absolute;
-    top: 0;
-    bottom: 0;
+#Product{
+    height: 100%;
+    padding-top: 90px;
     width: 100%;
-    height: 100%; 
     overflow: hidden;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    color: var(--white);
+}
+
+#Product img{
+
 }

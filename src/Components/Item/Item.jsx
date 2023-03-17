@@ -1,15 +1,16 @@
 import React from 'react'
+import './Item.css'
 
-const Item = (item) => {
+const Item = ({ item }) => {
   return (
     <>
-      <div>
-        <li className="item">
-          <div style={{ backgroundImage: `url(${item.image})` }}></div>
+      <li className="item">
+        <img src={item.image} alt={item.title} style={{objectFit: "cover"}} />
+        <div className="content">
           <h4>{item.title}</h4>
-          <p>$ {item.price.toFixed(2)}</p>
-        </li>
-      </div>
+          <p>${item.price.toFixed(2)}</p>
+        </div>
+      </li>
     </>
   );
 }

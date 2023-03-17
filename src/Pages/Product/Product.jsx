@@ -1,15 +1,17 @@
-import React, { useContext } from 'react'
-import { ItemsContext,CartContext } from '../../Context/Context'
+import React, { useContext,  } from 'react'
+import { ProductsContext,CartContext } from '../../Context/Context'
 import {useParams} from "react-router-dom";
 import './Product.css'
 
 const Product = () => {
-  const cart =  useContext(CartContext)
-  const items = useContext(ItemsContext).items
+  const cart = useContext(CartContext)
+  const items = useContext(ProductsContext)
   const products = [...items]
   const params = useParams()
   let id = params.id
+  
   const product = products[id]
+
   const checkIfItemInCart = (item) => {
     //first see if you can find item in cart
     let itemInCart = false
@@ -61,10 +63,17 @@ const addProduct = () =>{
 
   return (
     <>
-      <div className='Product'>
-        <div>{product.title}</div>
+      <section >
+        <div id='Product'>
+          <img src={product.image} alt={product.title}></img>
+          <div>
+            <h2>
+              {product.title}
+            </h2>
+          </div>
+        </div>
         <button onClick={() => addProduct()}>Add me</button>
-      </div>
+      </section>
     </>
   )
 }

@@ -1,16 +1,12 @@
 import React, {useContext} from 'react'
-import {CartContext} from '../../Context/Context'
+import {CartContext, CategoriesContext} from '../../Context/Context'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 
-const categories = [
-  'Men',
-  'Women',
-]
-
 const Navbar = () => {
   const cart = useContext(CartContext)
+  const categories = useContext(CategoriesContext)
   let count = cart.cart.length
   const showCart = () => {
     const element = document.getElementById('cart')
@@ -19,8 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div id='nav'>
-        <div  id="brand">
+      <nav id='nav'>
           <ul>
             <NavLink to={'/'} activeclassname ='active'
             className='link'
@@ -29,7 +24,7 @@ const Navbar = () => {
             </NavLink>
             {
               categories.map((category,index)=>
-                <NavLink key={index} to={`/catalog/${category}`}
+                <NavLink key={category} to={`/catalog/${category}`}
                 activeclassname ='active' className='link'
                 >
                   <li>
@@ -44,7 +39,6 @@ const Navbar = () => {
               About
             </NavLink>
           </ul>
-        </div>
         <div id="shopping">
           <div id='nav-cart'>
             <svg 
@@ -60,7 +54,7 @@ const Navbar = () => {
             <path d="M8.5 13L6 6H19.3371C19.6693 6 19.9092 6.31795 19.8179 6.63736L18.1036 12.6374C18.0423 12.852 17.8461 13 17.6228 13H8.5Z" fill="currentColor"/>
             </svg>
             <div>
-              <p>{count}</p>
+              <p> {count} </p>
             </div>
           </div>
           <Link to={'/search'} className='link'>
@@ -77,7 +71,7 @@ const Navbar = () => {
             </svg>
           </Link>
         </div>
-      </div>
+      </nav>
     </>
   )
 }

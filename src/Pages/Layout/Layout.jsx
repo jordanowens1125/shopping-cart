@@ -5,12 +5,11 @@ import Navbar from '../../Components/Navbar/Navbar'
 const Layout = () => {
   return (
     <>
-        <Navbar/>
-        <Cart />
-        <div id='Layout'>
-          <Outlet/>
-        </div>
-        
+      <Navbar />
+      <Cart />
+      <div id='Layout'>
+        <Outlet/>
+      </div>
     </>
   )
 }

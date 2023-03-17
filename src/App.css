@@ -1,31 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+
+:root{
+  --primary-color: #44c2fd;
+  --white: aliceblue;
+  --primary-bg-color: #15161b;
+  --lighter-bg-color: #2e3547;
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
 
 body{
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    background-color: var(--primary-bg-color);
+    color:var(--white);
 }
 
-.App{
+section{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    position: relative;
-    padding-bottom: 100px;
+    align-items: center;
 }
 
-#Layout{
-    padding-top: 80px;
+nav, section{
+    padding: 0px 10px;
 }
 
-
+#Search, #Checkout, #Catalog{
+  padding: 90px;
+}
 
 ul{
     list-style: none;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--primary-color) var(--lighter-bg-color);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--lighter-bg-color);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    border: 1px solid var(--lighter-bg-color);
+  }
+
+  @media screen and (min-width: 480px) {
+  nav, section {
+    padding: 0px 120px;
+  }
 }

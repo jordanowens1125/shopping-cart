@@ -1,23 +1,20 @@
 #nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height:80px;
-    width: 100vw;
-    color: white;
+    height:60px;
+    width: 100%;
     z-index: 1;
     position: absolute;
-    background-color: #131b3d;
+    z-index: 10;
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-#brand{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-#brand ul{
+ul{
     display: flex;
     gap:20px;
     padding-top: 10px;
@@ -26,15 +23,25 @@
 
 .link {
     text-decoration: none;
-    color: white;
+    padding: 10px;
+    color: inherit;
+}
+
+.link:hover{
+    color: var(--primary-color);
 }
 
 .active{
-    color:#00c0c4;
+    background-color: var(--primary-color);   
+    color: var(--white);
+
+}
+
+.active:hover{
+    color: var(--white);
 }
 
 #shopping{
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +51,8 @@
 #nav-cart{
     position: relative;
     display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #nav-cart div{
@@ -52,7 +61,7 @@
     top:0px;
     right:0px;
     border-radius: 50%;
-    background-color: #16b4b7;
+    background-color: var(--primary-color);
     height: 15px;
     width: 15px;
     align-items: center;
