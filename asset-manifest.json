@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.0b17eb84.css",
+    "main.js": "/shopping-cart/static/js/main.81366fb6.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/black-chevrolet-camaro.jpg": "/shopping-cart/static/media/black-chevrolet-camaro.eb55ad4a3bcb858b1870.jpg",
+    "static/media/BMW_Z4.jpg": "/shopping-cart/static/media/BMW_Z4.5ad8c8662db30bd8f3e7.jpg",
+    "static/media/4runner.jpg": "/shopping-cart/static/media/4runner.37865a951a6dea7c515a.jpg",
+    "static/media/forester.avif": "/shopping-cart/static/media/forester.4032100adb8586b57658.avif",
+    "static/media/chevrolet_corvette_e_ray.jpg": "/shopping-cart/static/media/chevrolet_corvette_e_ray.a5da81a27acf9f1da49f.jpg",
+    "static/media/Audi_TT.webp": "/shopping-cart/static/media/Audi_TT.faaf3bc55e4ceade6079.webp",
+    "static/media/huracan.webp": "/shopping-cart/static/media/huracan.53fb43bebc4996e6bfc8.webp",
+    "static/media/mazda_mx_5_miata.jpg": "/shopping-cart/static/media/mazda_mx_5_miata.e9b7220abca0c7944e3a.jpg",
+    "static/media/Scion_FR_S_series.jpg": "/shopping-cart/static/media/Scion_FR_S_series.afd9832e2de7a6e34479.jpg",
+    "static/media/Gold_Plated_Lamborghini_Aventador.jpg": "/shopping-cart/static/media/Gold_Plated_Lamborghini_Aventador.6a53891d4ede6c56738b.jpg",
+    "static/media/McLaren_Senna.webp": "/shopping-cart/static/media/McLaren_Senna.7d25be3b249269d0b6da.webp",
+    "static/media/Lexus_LC_500_Inspiration_Series.webp": "/shopping-cart/static/media/Lexus_LC_500_Inspiration_Series.e2a9d412c60287668eb2.webp",
+    "static/media/Porsche_911_Turbo_S_Coupe_5.webp": "/shopping-cart/static/media/Porsche_911_Turbo_S_Coupe_5.a41d2a999642f4117326.webp",
+    "static/media/supra-european-specification-prototype001-1651151397.jpg": "/shopping-cart/static/media/supra-european-specification-prototype001-1651151397.6827cc9ff82066f30bb5.jpg",
+    "static/media/pilot.webp": "/shopping-cart/static/media/pilot.c9fc3cdf7a8ca3e7ab9a.webp",
+    "static/media/passport.webp": "/shopping-cart/static/media/passport.3174dee50b087902a912.webp",
+    "static/media/Porsche_718_Cayman_GT4_RS_4.webp": "/shopping-cart/static/media/Porsche_718_Cayman_GT4_RS_4.f4f3e1198eb68271cfc9.webp",
+    "static/media/about-car.jpg": "/shopping-cart/static/media/about-car.10368a28a271b2d68c0d.jpg",
+    "static/media/bugatti_chiron.webp": "/shopping-cart/static/media/bugatti_chiron.8b1bf1e3b40172be1314.webp",
+    "static/media/Lexus_RX.webp": "/shopping-cart/static/media/Lexus_RX.2c646b3943e610ed9661.webp",
+    "static/media/nissan-gt-r.jpg": "/shopping-cart/static/media/nissan-gt-r.e0ee49cb5aa5d785547f.jpg",
+    "static/media/home.avif": "/shopping-cart/static/media/home.ea55db899b66b55e7d8b.avif",
+    "static/media/mazda_cx9.jpg": "/shopping-cart/static/media/mazda_cx9.24dcbfd49bf667f1be3a.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.0b17eb84.css.map": "/shopping-cart/static/css/main.0b17eb84.css.map",
+    "main.81366fb6.js.map": "/shopping-cart/static/js/main.81366fb6.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b17eb84.css",
+    "static/js/main.81366fb6.js"
+  ]
+}
