@@ -15,24 +15,20 @@ const Product = () => {
   const checkIfItemInCart = (item) => {
     //first see if you can find item in cart
     let itemInCart = false
-    for (let i = 0; i < cart.cart.length; i++)
-    {
-        if (item.title === cart.cart[i].title)
-        {
-            itemInCart = true;
-        }
+    for (let i = 0; i < cart.cart.length; i++) {
+      if (item.title === cart[i].title) {
+        itemInCart = true;
+      }
     }
     return itemInCart
 }
 
 const getItemInCart = (item) => {
   //first see if you can find item in cart
-  for (let i = 0; i < cart.cart.length; i++)
-  {
-      if (item.title === cart.cart[i].title)
-      {
-          return i
-      }
+  for (let i = 0; i < cart.cart.length; i++) {
+    if (item.title === cart.cart[i].title) {
+      return i;
+    }
   }
 }
 
@@ -42,13 +38,13 @@ const showCart = () => {
 }
 
 const addProduct = () =>{
-    const updatedCart = [...cart.cart]
+    const updatedCart = [...cart.cart];
     const itemInCart = checkIfItemInCart(product)
     //if yes then just update that item quantity
     if(itemInCart){
       //find item in cart to get the correct id
         let index = getItemInCart(product)
-        cart.cart[index].quantity++
+        cart.cart[index].quantity++;
     }
     else{
         //if no then add item to cart
@@ -56,7 +52,7 @@ const addProduct = () =>{
         newItem.quantity = 1;
         updatedCart.push(newItem)
     }
-    cart.setCart(updatedCart)
+    cart.setCart(updatedCart);
     //show cart
     showCart()
 }

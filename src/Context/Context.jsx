@@ -5,8 +5,6 @@ export const CartContext = createContext([])
 export const ProductsContext = createContext(cars)
 export const CategoriesContext = createContext([])
 
-
-
 export const CategoriesProvider = ({children}) => {
     const data = ['cars','suvs']
     

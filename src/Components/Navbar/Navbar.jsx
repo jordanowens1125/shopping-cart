@@ -7,7 +7,9 @@ import './Navbar.css'
 const Navbar = () => {
   const cart = useContext(CartContext)
   const categories = useContext(CategoriesContext)
-  let count = cart.cart.length
+  console.log(categories);
+  let count = cart.length
+  
   const showCart = () => {
     const element = document.getElementById('cart')
     element.classList.toggle('open')

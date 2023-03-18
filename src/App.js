@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import {  useState } from "react";
@@ -13,7 +13,7 @@ import Layout from "./Pages/Layout/Layout";
 import Checkout from './Pages/Checkout/Checkout'
 import Search from './Pages/Search/Search'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout />,
@@ -57,8 +57,11 @@ function App() {
     <CartContext.Provider value={{ cart, setCart }}>
       <CategoriesProvider>
         <ProductsProvider>
+          <div className="App">
           <RouterProvider router={router}>
+            
           </RouterProvider>
+          </div>
         </ProductsProvider>
       </CategoriesProvider>
     </CartContext.Provider>
