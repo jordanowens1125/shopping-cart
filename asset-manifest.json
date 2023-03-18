@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.0b17eb84.css",
-    "main.js": "/shopping-cart/static/js/main.81366fb6.js",
+    "main.js": "/shopping-cart/static/js/main.12c23081.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/black-chevrolet-camaro.jpg": "/shopping-cart/static/media/black-chevrolet-camaro.eb55ad4a3bcb858b1870.jpg",
     "static/media/BMW_Z4.jpg": "/shopping-cart/static/media/BMW_Z4.5ad8c8662db30bd8f3e7.jpg",
@@ -28,11 +28,11 @@
     "static/media/mazda_cx9.jpg": "/shopping-cart/static/media/mazda_cx9.24dcbfd49bf667f1be3a.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.0b17eb84.css.map": "/shopping-cart/static/css/main.0b17eb84.css.map",
-    "main.81366fb6.js.map": "/shopping-cart/static/js/main.81366fb6.js.map",
+    "main.12c23081.js.map": "/shopping-cart/static/js/main.12c23081.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b17eb84.css",
-    "static/js/main.81366fb6.js"
+    "static/js/main.12c23081.js"
   ]
 }
