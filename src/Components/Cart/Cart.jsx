@@ -6,7 +6,6 @@ import useOutsideClick from '../../Hooks/useOutsideClick'
 
 const Cart = () => {
   const cart = useContext(CartContext)
-  console.log(cart);
   const impactRef = useRef();
 
   const handleClose = () => {

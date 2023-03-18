@@ -8,7 +8,7 @@ const Navbar = () => {
   const cart = useContext(CartContext)
   const categories = useContext(CategoriesContext)
   console.log(categories);
-  let count = cart.length
+  let count = cart.cart.length
   
   const showCart = () => {
     const element = document.getElementById('cart')
