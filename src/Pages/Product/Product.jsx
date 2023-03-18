@@ -16,7 +16,7 @@ const Product = () => {
     //first see if you can find item in cart
     let itemInCart = false
     for (let i = 0; i < cart.cart.length; i++) {
-      if (item.title === cart[i].title) {
+      if (item.title === cart.cart[i].title) {
         itemInCart = true;
       }
     }
