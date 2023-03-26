@@ -12,6 +12,8 @@ const Product = () => {
   
   const product = products[id]
 
+  const nav = document.getElementById('nav')
+
   const checkIfItemInCart = (item) => {
     //first see if you can find item in cart
     let itemInCart = false
@@ -34,7 +36,10 @@ const getItemInCart = (item) => {
 
 const showCart = () => {
   let element = document.getElementById("cart");
-  element.classList.add("open");
+  if (element.classList.contains('cart-hide')) {
+    element.classList.add("cart-show");
+    element.classList.remove("cart-hide");
+  }
 }
 
 const addProduct = () =>{
@@ -59,19 +64,25 @@ const addProduct = () =>{
 
   return (
     <>
-      <section >
-        <div id='Product'>
+      <section>
+        <div id="Product">
           <img src={product.image} alt={product.title}></img>
-          <div>
-            <h2>
-              {product.title}
-            </h2>
+          <div className="Product-details">
+            <h2>{product.title}</h2>
+            <p>
+              I'm baby drinking vinegar chia 8-bit before they sold out. Praxis
+              health goth beard, +1 DIY heirloom roof party trust fund. Pork
+              belly retro actually succulents williamsburg craft beer adaptogen
+              direct trade trust fund. Praxis health goth beard, +1 DIY heirloom
+              roof party trust fund. Pork belly retro actually succulents
+              williamsburg craft beer adaptogen direct trade trust fund.
+            </p>
+            <button onClick={() => addProduct()}>Add To Cart</button>
           </div>
         </div>
-        <button onClick={() => addProduct()}>Add me</button>
       </section>
     </>
-  )
+  );
 }
 
 export default Product

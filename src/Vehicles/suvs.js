@@ -6,7 +6,15 @@ import mazda from "../Assets/suv-images/mazda_cx9.jpg";
 import passport from "../Assets/suv-images/passport.webp";
 import pilot from "../Assets/suv-images/pilot.webp";
 
-export const suvs = [
+export const suvs = [{
+    id: 15,
+    title: "Honda Pilot Cary",
+    price: 0,
+    image: pilot,
+    details: "",
+    category: "suvs",
+    src: "https://www.autoparkhonda.com/static/brand-honda/vehicle/2021/Honda/Pilot/MRP/01.jpg",
+  },
   {
     id: 16,
     title: "Toyota 4Runner",
@@ -36,12 +44,12 @@ export const suvs = [
   },
   {
     id: 19,
-    title: "Honda Pilot Cary",
+    title: "Subaru Crosstrek",
     price: 0,
-    image: pilot,
+    image: crosstrek,
     details: "",
     category: "suvs",
-    src: "https://www.autoparkhonda.com/static/brand-honda/vehicle/2021/Honda/Pilot/MRP/01.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFHH4REEtMAqGEZDv1cefRWdPJa8RrxLuPhieuXKYGpw&usqp=CAU&ec=48600113",
   },
   {
     id: 20,
@@ -61,15 +69,7 @@ export const suvs = [
     category: "suvs",
     src: "https://www.kbb.com/wp-content/uploads/2023/01/2023-subaru-forester-front-left-3qtr.jpg",
   },
-  {
-    id: 22,
-    title: "Subaru Crosstrek",
-    price: 0,
-    image: crosstrek,
-    details: "",
-    category: "suvs",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFHH4REEtMAqGEZDv1cefRWdPJa8RrxLuPhieuXKYGpw&usqp=CAU&ec=48600113",
-  },
+  
 
   //   { id: 16,
   //     title: "",

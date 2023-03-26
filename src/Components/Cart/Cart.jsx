@@ -1,6 +1,6 @@
 import React, {useContext , useRef} from 'react'
 import { Link } from 'react-router-dom'
-import {CartContext} from '../../Context/Context'
+import { CartContext } from '../../Context/Context'
 import './Cart.css'
 import useOutsideClick from '../../Hooks/useOutsideClick'
 
@@ -9,8 +9,9 @@ const Cart = () => {
   const impactRef = useRef();
 
   const handleClose = () => {
-    let element = document.getElementById("cart");
-    element.classList.remove("open");
+    const element = document.getElementById("cart");
+    element.classList.remove("cart-show");
+    element.classList.add("cart-hide");
   }
 
   useOutsideClick(impactRef, () => handleClose()); //Change my dropdown state to close when clicked outside
@@ -29,42 +30,75 @@ const Cart = () => {
     let currentCount = updatedCart[index].quantity
     currentCount += num
     updatedCart[index].quantity = currentCount
-    //remove item if less thn 1
+    //remove item if less than 1
     if(currentCount < 1){
       updatedCart.splice(index,1)
     }
     cart.setCart(updatedCart)
-
   }
+
+  const removeItemFromChart = (index) => {
+    let updatedCart = [...cart.cart]
+    updatedCart.splice(index, 1)
+    cart.setCart(updatedCart)
+  }
+
   const total = getTotal()
   
   return (
     <>
-      <div id='cart' ref={impactRef}>
-        Cart
-        <ul>
-          {
-          cart.cart.map((item,index)=>
-            <li key={index}>
+      <div id="cart" ref={impactRef} className="cart-hide">
+        <span>Cart</span>
+        <svg
+          fill="currentColor"
+          width="40px"
+          height="40px"
+          viewBox="0 0 32 32"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={handleClose}
+          className="close"
+        >
+          <title>cancel</title>
+          <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"></path>
+        </svg>
+        <div className="cart-info">
+          <ul>
+            {cart.cart.map((item, index) => (
+              <li key={index}>
                 <p>{item.title}</p>
-                <p>{item.quantity}</p>
-                <button onClick={() => updateItemQuantity(1,index)}>Add</button>
-                <button onClick={() => updateItemQuantity(-1,index)}>Subtract</button>
-            </li>
-          )
-        }
-        </ul>
-        
-        <div>
-          ${total.toFixed(2)}
+
+                <img src={item.image} alt={item.title} />
+                <div className="product-actions">
+                  <button onClick={() => updateItemQuantity(1, index)}>
+                    Add
+                  </button>
+                  <span className="product-quantity">{item.quantity}</span>
+                  <button onClick={() => updateItemQuantity(-1, index)}>
+                    Subtract
+                  </button>
+                  <svg
+                    fill="currentColor"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    onClick={(e) => removeItemFromChart(index)}
+                  >
+                    <path d="M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z" />
+                  </svg>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div>${total.toFixed(2)}</div>
         </div>
         <div>
-          <Link to={'/checkout'}>Checkout</Link>
+          <Link to={"/checkout"}>Checkout</Link>
         </div>
       </div>
     </>
-    
-  )
+  );
 }
 
 export default Cart

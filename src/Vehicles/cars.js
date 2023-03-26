@@ -63,15 +63,6 @@ export const cars = [
   },
   {
     id: 5,
-    title: "Chevrolet Corvette E-Ray",
-    price: 0,
-    image: corvette,
-    details: "",
-    category: "cars",
-    src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2024-chevrolet-corvette-e-ray-3lz-012-1673977695.jpg?crop=0.591xw:0.786xh;0.162xw,0.214xh&resize=1200:*",
-  },
-  {
-    id: 6,
     title: "Gold Plated Lamborghini Aventador",
     price: 0,
     image: goldPlatedLambo,
@@ -80,7 +71,7 @@ export const cars = [
     src: "https://www.carscoops.com/wp-content/uploads/2015/01/Lambo-Gold-1.jpg",
   },
   {
-    id: 7,
+    id: 6,
     title: "Lamborghini Huracan EVO",
     price: 0,
     image: huracan,
@@ -89,16 +80,16 @@ export const cars = [
     src: "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/huracan/evo/2022/10_06/over/hura_evo_over_01_m.jpg",
   },
   {
-    id: 8,
-    title: "Jaguar F-Type R",
+    id: 7,
+    title: "Chevrolet Corvette E-Ray",
     price: 0,
-    image: jaguar,
+    image: corvette,
     details: "",
     category: "cars",
-    src: "https://content.homenetiol.com/2000292/2141011/0x0/d7a73935a5ad4cfb9b068c96c110b95a.jpg",
+    src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2024-chevrolet-corvette-e-ray-3lz-012-1673977695.jpg?crop=0.591xw:0.786xh;0.162xw,0.214xh&resize=1200:*",
   },
   {
-    id: 9,
+    id: 8,
     title: "Lexus LC 500 Inspiration Series",
     price: 0,
     image: lexus,
@@ -107,7 +98,7 @@ export const cars = [
     src: "",
   },
   {
-    id: 10,
+    id: 9,
     title: "Maza MX-5 Miata",
     price: 0,
     image: mazda,
@@ -117,7 +108,7 @@ export const cars = [
   },
 
   {
-    id: 11,
+    id: 10,
     title: "Nissa GT-R",
     price: 0,
     image: nissan,
@@ -126,7 +117,7 @@ export const cars = [
     src: "https://hips.hearstapps.com/hmg-prod/images/2023-nissan-gt-r-101-1671034165.jpg?crop=0.735xw:0.966xh;0.0163xw,0&resize=640:*",
   },
   {
-    id: 12,
+    id: 11,
     title: "McLaren Senna",
     price: 0,
     image: senna,
@@ -135,7 +126,7 @@ export const cars = [
     src: "https://mclaren.scene7.com/is/image/mclaren/Senna-Hero1920x1080:crop-16x9?wid=1980&hei=1114",
   },
   {
-    id: 13,
+    id: 12,
     title: "Scion FR-S",
     price: 0,
     image: scion,
@@ -144,7 +135,7 @@ export const cars = [
     src: "https://doubleclutch.ca/wp-content/uploads/2015/02/DSC01041-1000x570.jpg",
   },
   {
-    id: 14,
+    id: 13,
     title: "Toyota GR Supra",
     price: 0,
     image: supra,
@@ -153,7 +144,7 @@ export const cars = [
     src: "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2021/05/HERO-2022-Supra-A91-CF-Windtunnel.jpg",
   },
   {
-    id: 15,
+    id: 14,
     title: "Porsche 911 Turbo S",
     price: 0,
     image: turbo,
@@ -161,7 +152,7 @@ export const cars = [
     category: "cars",
     src: "https://www.motortrend.com/uploads/sites/5/2020/03/2021-Porsche-911-Turbo-S-Coupe-5.jpg",
   },
-  //   { id: 16,
+  //   { id: 15,
   //     title: "",
   //     price: 0,
   //     image : "",
