@@ -2,6 +2,7 @@ import React from 'react'
 import {CartContext} from '../../Context/Context'
 import { useContext } from 'react'
 import './Checkout.css'
+import { Link } from 'react-router-dom'
 
 const Checkout = () => {
     const cart = useContext(CartContext)
@@ -82,9 +83,12 @@ const Checkout = () => {
           </ul>
           <div id="order-summary">
             <span>Order Summary</span>
-            <div>
+            <span>
               Total : ${total.toLocaleString("en", { useGrouping: true })}.00
-            </div>
+            </span>
+            <Link to={'/'}>
+              Checkout
+            </Link>
           </div>
         </section>
       </>

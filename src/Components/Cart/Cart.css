@@ -13,6 +13,16 @@
     overflow: hidden;
 }
 
+#cart a{
+  background-color: var(--primary-color);
+  padding: 10px;
+  width: 80px;
+}
+
+#cart a:hover{
+  transform: scale(1.05);
+}
+
 .cart-show{
     transition: 1s;
     width: 25vw;
@@ -76,14 +86,6 @@
 
 #cart *{
     color: var(--white);
-}
-
-#checkout-link{
-  color: var(--white);
-}
-
-#checkout-link:hover{
-  color: var(--primary-color);
 }
 
 @media screen and (max-width: 480px) {

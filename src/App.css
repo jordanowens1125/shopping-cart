@@ -18,7 +18,7 @@ body{
     height: 100%;
     width: 100vw;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: var(--primary-bg-color);
     color:var(--white);
     overflow-x: hidden;
@@ -47,12 +47,11 @@ svg{
   width: 30px;
 }
 
-
 button{
   color: var(--white);
   background-color: var(--primary-color);
     border: none;
-    padding: 5px;
+    padding: 8px;
   align-items: center;
   justify-content: center;
   width: 100px;
@@ -62,10 +61,11 @@ button:hover, svg:hover{
   cursor: pointer;
    transform: scale(1.05);
 }
-/* a:-webkit-any-link {
+
+a:-webkit-any-link {
   text-decoration: none;
   color: inherit;
-} */
+}
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
