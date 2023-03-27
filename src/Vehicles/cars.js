@@ -19,7 +19,7 @@ export const cars = [
   {
     id: 0,
     title: "Audit TT",
-    price: 0,
+    price: 51000,
     image: auditt,
     details: "",
     category: "cars",
@@ -28,7 +28,7 @@ export const cars = [
   {
     id: 1,
     title: "Black Chevrolet Camaro",
-    price: 10,
+    price: 40000,
     image: blackchevcamaro,
     details: "",
     category: "cars",
@@ -37,7 +37,7 @@ export const cars = [
   {
     id: 2,
     title: "BMW Z4",
-    price: 0,
+    price: 42000,
     image: bmwz4,
     details: "",
     category: "cars",
@@ -46,7 +46,7 @@ export const cars = [
   {
     id: 3,
     title: "Bugatti Chiron",
-    price: 0,
+    price: 1500000,
     image: bugatti_chiron,
     details: "",
     category: "cars",
@@ -55,7 +55,7 @@ export const cars = [
   {
     id: 4,
     title: "Porsche 718 Cayman",
-    price: 0,
+    price: 64000,
     image: cayman,
     details: "",
     category: "cars",
@@ -64,7 +64,7 @@ export const cars = [
   {
     id: 5,
     title: "Gold Plated Lamborghini Aventador",
-    price: 0,
+    price: 550000,
     image: goldPlatedLambo,
     details: "",
     category: "cars",
@@ -73,7 +73,7 @@ export const cars = [
   {
     id: 6,
     title: "Lamborghini Huracan EVO",
-    price: 0,
+    price: 270000,
     image: huracan,
     details: "",
     category: "cars",
@@ -82,7 +82,7 @@ export const cars = [
   {
     id: 7,
     title: "Chevrolet Corvette E-Ray",
-    price: 0,
+    price: 105000,
     image: corvette,
     details: "",
     category: "cars",
@@ -91,7 +91,7 @@ export const cars = [
   {
     id: 8,
     title: "Lexus LC 500 Inspiration Series",
-    price: 0,
+    price: 96000,
     image: lexus,
     details: "",
     category: "cars",
@@ -100,7 +100,7 @@ export const cars = [
   {
     id: 9,
     title: "Maza MX-5 Miata",
-    price: 0,
+    price: 30000,
     image: mazda,
     details: "",
     category: "cars",
@@ -110,7 +110,7 @@ export const cars = [
   {
     id: 10,
     title: "Nissa GT-R",
-    price: 0,
+    price: 120000,
     image: nissan,
     details: "",
     category: "cars",
@@ -119,7 +119,7 @@ export const cars = [
   {
     id: 11,
     title: "McLaren Senna",
-    price: 0,
+    price: 1350000,
     image: senna,
     details: "",
     category: "cars",
@@ -128,7 +128,7 @@ export const cars = [
   {
     id: 12,
     title: "Scion FR-S",
-    price: 0,
+    price: 30000,
     image: scion,
     details: "",
     category: "cars",
@@ -137,7 +137,7 @@ export const cars = [
   {
     id: 13,
     title: "Toyota GR Supra",
-    price: 0,
+    price: 45000,
     image: supra,
     details: "",
     category: "cars",
@@ -146,7 +146,7 @@ export const cars = [
   {
     id: 14,
     title: "Porsche 911 Turbo S",
-    price: 0,
+    price: 175000,
     image: turbo,
     details: "",
     category: "cars",

@@ -12,8 +12,6 @@ const Product = () => {
   
   const product = products[id]
 
-  const nav = document.getElementById('nav')
-
   const checkIfItemInCart = (item) => {
     //first see if you can find item in cart
     let itemInCart = false
@@ -76,6 +74,9 @@ const addProduct = () =>{
               direct trade trust fund. Praxis health goth beard, +1 DIY heirloom
               roof party trust fund. Pork belly retro actually succulents
               williamsburg craft beer adaptogen direct trade trust fund.
+            </p>
+            <p>
+              ${product.price.toLocaleString("en", { useGrouping: true })}.00
             </p>
             <button onClick={() => addProduct()}>Add To Cart</button>
           </div>

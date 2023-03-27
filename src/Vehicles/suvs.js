@@ -8,8 +8,8 @@ import pilot from "../Assets/suv-images/pilot.webp";
 
 export const suvs = [{
     id: 15,
-    title: "Honda Pilot Cary",
-    price: 0,
+    title: "Honda Pilot Carey",
+    price: 42000,
     image: pilot,
     details: "",
     category: "suvs",
@@ -18,7 +18,7 @@ export const suvs = [{
   {
     id: 16,
     title: "Toyota 4Runner",
-    price: 0,
+    price: 45000,
     image: runner,
     details: "",
     category: "suvs",
@@ -27,7 +27,7 @@ export const suvs = [{
   {
     id: 17,
     title: "Lexus RX 350L",
-    price: 10,
+    price: 52000,
     image: lexusRX,
     details: "",
     category: "suvs",
@@ -36,7 +36,7 @@ export const suvs = [{
   {
     id: 18,
     title: "Honda Passport",
-    price: 0,
+    price: 42000,
     image: passport,
     details: "",
     category: "suvs",
@@ -45,7 +45,7 @@ export const suvs = [{
   {
     id: 19,
     title: "Subaru Crosstrek",
-    price: 0,
+    price: 32000,
     image: crosstrek,
     details: "",
     category: "suvs",
@@ -54,7 +54,7 @@ export const suvs = [{
   {
     id: 20,
     title: "Mazda CX-9",
-    price: 0,
+    price: 39000,
     image: mazda,
     details: "",
     category: "suvs",
@@ -63,7 +63,7 @@ export const suvs = [{
   {
     id:21,
     title: "Subaru Forester",
-    price: 0,
+    price: 27000,
     image: forester,
     details: "",
     category: "suvs",

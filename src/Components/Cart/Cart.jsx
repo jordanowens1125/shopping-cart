@@ -67,35 +67,41 @@ const Cart = () => {
             {cart.cart.map((item, index) => (
               <li key={index}>
                 <p>{item.title}</p>
-
+                <p>
+                  $ {item.price.toLocaleString("en", { useGrouping: true })}.00
+                </p>
                 <img src={item.image} alt={item.title} />
                 <div className="product-actions">
-                  <button onClick={() => updateItemQuantity(1, index)}>
-                    Add
-                  </button>
-                  <span className="product-quantity">{item.quantity}</span>
                   <button onClick={() => updateItemQuantity(-1, index)}>
                     Subtract
                   </button>
+                  <span className="product-quantity">{item.quantity}</span>
+                  <button onClick={() => updateItemQuantity(1, index)}>
+                    Add
+                  </button>
                   <svg
                     fill="currentColor"
-                    width="20px"
-                    height="20px"
-                    viewBox="0 0 24 24"
+                    width="40px"
+                    height="40px"
+                    viewBox="0 0 32 32"
+                    version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                     onClick={(e) => removeItemFromChart(index)}
                   >
-                    <path d="M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z" />
+                    <title>cancel2</title>
+                    <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"></path>
                   </svg>
                 </div>
               </li>
             ))}
           </ul>
-          <div>${total.toFixed(2)}</div>
+          <div>
+            Total: ${total.toLocaleString("en", { useGrouping: true })}.00
+          </div>
         </div>
-        <div>
-          <Link to={"/checkout"}>Checkout</Link>
-        </div>
+        <Link id="checkout-link" to={"/checkout"} onClick={handleClose}>
+          Checkout
+        </Link>
       </div>
     </>
   );

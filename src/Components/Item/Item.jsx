@@ -8,7 +8,7 @@ const Item = ({ item }) => {
         <img src={item.image} alt={item.title} style={{objectFit: "cover"}} />
         <div className="content">
           <h4>{item.title}</h4>
-          <p>${item.price.toFixed(2)}</p>
+          <p>$ {item.price.toLocaleString('en', {useGrouping:true})}.00</p>
         </div>
       </li>
     </>

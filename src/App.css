@@ -35,7 +35,7 @@ nav, section{
     padding: 0px 10px;
 }
 
-#Search, #Checkout, #Catalog{
+#Search, #Catalog{
   padding: 90px;
 }
 
@@ -46,6 +46,26 @@ ul{
 svg{
   width: 30px;
 }
+
+
+button{
+  color: var(--white);
+  background-color: var(--primary-color);
+    border: none;
+    padding: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+button:hover, svg:hover{
+  cursor: pointer;
+   transform: scale(1.05);
+}
+/* a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+} */
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */

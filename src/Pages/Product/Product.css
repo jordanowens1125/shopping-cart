@@ -24,14 +24,6 @@
 
 .Product-details button{
     width: 100px;
-    padding: 5px;
-    background-color: var(--primary-color);
-    border: none;
-    color: var(--white);
-}
-
-.Product-details button:hover{
-    cursor: pointer;
 }
 
 @media screen and (max-width: 1210px) {
