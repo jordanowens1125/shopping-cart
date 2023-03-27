@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.52ff2c2a.css",
-    "main.js": "/shopping-cart/static/js/main.5ae9b29e.js",
+    "main.css": "/shopping-cart/static/css/main.03e46584.css",
+    "main.js": "/shopping-cart/static/js/main.de083070.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/black-chevrolet-camaro.jpg": "/shopping-cart/static/media/black-chevrolet-camaro.eb55ad4a3bcb858b1870.jpg",
     "static/media/BMW_Z4.jpg": "/shopping-cart/static/media/BMW_Z4.5ad8c8662db30bd8f3e7.jpg",
@@ -28,12 +28,12 @@
     "static/media/mazda_cx9.jpg": "/shopping-cart/static/media/mazda_cx9.24dcbfd49bf667f1be3a.jpg",
     "static/media/bars.svg": "/shopping-cart/static/media/bars.b45f0e52a126f2c18bfcd2c301f2cd3d.svg",
     "index.html": "/shopping-cart/index.html",
-    "main.52ff2c2a.css.map": "/shopping-cart/static/css/main.52ff2c2a.css.map",
-    "main.5ae9b29e.js.map": "/shopping-cart/static/js/main.5ae9b29e.js.map",
+    "main.03e46584.css.map": "/shopping-cart/static/css/main.03e46584.css.map",
+    "main.de083070.js.map": "/shopping-cart/static/js/main.de083070.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52ff2c2a.css",
-    "static/js/main.5ae9b29e.js"
+    "static/css/main.03e46584.css",
+    "static/js/main.de083070.js"
   ]
 }
