@@ -68,12 +68,15 @@ const addProduct = () =>{
           <div className="Product-details">
             <h2>{product.title}</h2>
             <p>
-              I'm baby drinking vinegar chia 8-bit before they sold out. Praxis
-              health goth beard, +1 DIY heirloom roof party trust fund. Pork
-              belly retro actually succulents williamsburg craft beer adaptogen
-              direct trade trust fund. Praxis health goth beard, +1 DIY heirloom
-              roof party trust fund. Pork belly retro actually succulents
-              williamsburg craft beer adaptogen direct trade trust fund.
+              {/* {product.description} */}
+              Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              faucibus tortor sed venenatis efficitur. Quisque sit amet sapien
+              congue, lobortis turpis consequat, auctor metus. Maecenas feugiat
+              vulputate augue, a varius ligula maximus eu. Aliquam vitae diam
+              neque. Praesent efficitur porttitor est, eget facilisis eros
+              gravida vel. Mauris vel vestibulum tortor. Curabitur ac nisi
+              lectus.
             </p>
             <p>
               ${product.price.toLocaleString("en", { useGrouping: true })}.00

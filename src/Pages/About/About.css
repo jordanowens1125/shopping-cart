@@ -5,6 +5,11 @@
     background-size: cover;
     color: var(--white);
     justify-content: center;
+    text-align: center;
+}
+
+#About div{
+    width: 80%;
 }
 
 #About h2{

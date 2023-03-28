@@ -3,16 +3,20 @@ import './About.css'
 
 const About = () => {
   return (
-    <section id='About'>
-      <h2>Heading here</h2>
+    <section id="About">
+      <div>
+        <h2>About Us</h2>
       <p>
-        Random text talking about Neo and whatever else and this and that. Also that and dont forget ths. Also add in a bit about the other thing that is connected to the other other thing.
+        Sed scelerisque sollicitudin felis eu luctus. Nam auctor consectetur
+        maximus. Proin varius magna elit, vestibulum aliquet augue posuere
+        lobortis. Phasellus viverra dolor risus, sollicitudin hendrerit metus
+        interdum id. Sed ut erat urna. Morbi lobortis gravida purus, quis
+        pretium odio pulvinar eu.{" "}
       </p>
-      <p>
-        Random text again discussing the one and only Neo Motors
-      </p>
+      </div>
+      
     </section>
-  )
+  );
 }
 
 export default About
