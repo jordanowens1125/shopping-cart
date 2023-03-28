@@ -1,5 +1,10 @@
 #Search{
     justify-content: center;
+    gap: 20px;
+}
+
+#Search input{
+    padding: 5px;
 }
 
 #search-results{

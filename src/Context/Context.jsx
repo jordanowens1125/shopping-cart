@@ -1,6 +1,6 @@
 import { createContext,  } from "react";
-import { cars } from '..//Vehicles/cars'
-import { suvs } from "../Vehicles/suvs";
+import { cars } from '../data/cars'
+import { suvs } from "../data/suvs";
 export const CartContext = createContext([])
 export const ProductsContext = createContext(cars)
 export const CategoriesContext = createContext([])

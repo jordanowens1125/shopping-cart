@@ -17,7 +17,7 @@ const Search = () => {
   return (
     <section id="Search">
       <div className="search-container">
-        <input type="text" value={searchInput} onChange={handleInputChange} />
+        <input type="text" value={searchInput} onChange={handleInputChange} placeholder='Search'/>
         <span>
           "{searchInput === ''? 'All': searchInput}"
           ({filteredItems.length})
