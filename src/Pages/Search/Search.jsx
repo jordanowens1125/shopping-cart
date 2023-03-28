@@ -2,6 +2,7 @@ import React, { useContext,useState } from 'react'
 import './Search.css'
 import { ProductsContext } from "../../Context/Context";
 import Item from '../../Components/Item/Item';
+import { Link } from "react-router-dom";
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState('')
@@ -25,7 +26,13 @@ const Search = () => {
       <ul id='search-results'>
           {filteredItems.map((item) => {
             return (
-              <Item item={item} key={item.title } />
+              <Link
+                to={`/catalog/product/${item.id}`}
+                key={item.id}
+                style={{ textDecoration: "inherit" }}
+              >
+                <Item item={item} />
+              </Link>
             );
           })}
       </ul>
