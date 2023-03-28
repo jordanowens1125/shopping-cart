@@ -9,9 +9,8 @@ const Catalog = () => {
     const items = useContext(ProductsContext)
     const filter = useParams().category
     let filteredList = [...items]
-    const [sorted, setSort] = useState(false)
+    // const [sorted, setSort] = useState(false)
     const [leastToGreatest,setLeastToGreatest] = useState('default')
-    // console.log(filter)
     //make sure something is there for parameter or just return the list
     if (filter)
     {
