@@ -1,43 +1,39 @@
-import React, { useContext,useState } from 'react'
-import './Search.css'
-import { ProductsContext } from "../../Context/Context";
-import Item from '../../Components/Item/Item';
+import React, { useContext, useState } from "react";
+import "./Search.css";
+import { ProductsContext } from "../../Context/Context.tsx";
+import Item from "../../Components/Item/Item.tsx";
 import { Link } from "react-router-dom";
 
 const Search = () => {
-  const [searchInput, setSearchInput] = useState('')
-  const items = useContext(ProductsContext)
+  const [searchInput, setSearchInput] = useState("");
+  const items = useContext(ProductsContext);
   const filteredItems = items.filter((item) => {
-    const capitalizedTitle = item.title.toUpperCase()
+    const capitalizedTitle = item.title.toUpperCase();
     return capitalizedTitle.includes(searchInput.toUpperCase());
-  })
+  });
   const handleInputChange = (e) => {
-    setSearchInput(e.currentTarget.value)
-  }
+    setSearchInput(e.currentTarget.value);
+  };
   return (
     <section id="Search">
       <div className="search-container">
-        <input type="text" value={searchInput} onChange={handleInputChange} placeholder='Search'/>
+        <input
+          type="text"
+          value={searchInput}
+          onChange={handleInputChange}
+          placeholder="Search"
+        />
         <span>
-          "{searchInput === ''? 'All': searchInput}"
-          ({filteredItems.length})
+          "{searchInput === "" ? "All" : searchInput}" ({filteredItems.length})
         </span>
       </div>
-      <ul id='search-results'>
-          {filteredItems.map((item) => {
-            return (
-              <Link
-                to={`/catalog/product/${item.id}`}
-                key={item.id}
-                style={{ textDecoration: "inherit" }}
-              >
-                <Item item={item} />
-              </Link>
-            );
-          })}
+      <ul className="items">
+        {filteredItems.map((item) => {
+          return <Item item={item} key={item.id} />;
+        })}
       </ul>
     </section>
   );
-}
+};
 
-export default Search
+export default Search;

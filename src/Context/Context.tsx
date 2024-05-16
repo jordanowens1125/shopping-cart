@@ -1,9 +1,10 @@
 import { createContext,  } from "react";
-import { cars } from '../data/cars'
-import { suvs } from "../data/suvs";
+import { cars } from "../data/cars.ts";
+import { suvs } from "../data/suvs.ts";
 export const CartContext = createContext([])
 export const ProductsContext = createContext(cars)
 export const CategoriesContext = createContext([])
+export const NotificationContext = createContext([]);
 
 export const CategoriesProvider = ({children}) => {
     const data = ['cars','suvs']

@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #44c2fd;
+  --white: aliceblue;
+  --primary-bg-color: #15161b;
+  --lighter-bg-color: #2e3547;
+  --maxContainerWidth: 1200px;
+  --navHeight: 60px;
+  --maxSideBarWidth: 400px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  background-color: var(--primary-bg-color);
+  color: var(--white);
+  overflow-x: hidden;
+}
+#root,
+.App,
+#nav,
+#cart {
+  overflow-x: hidden;
+}
+
+nav {
+  padding: 0px 20px;
+  max-width: var(--maxContainerWidth);
+  margin: auto;
+  width: 100vw;
+  height: var(--navHeight);
+}
+
+section {
+  padding: 90px 20px;
+  max-width: var(--maxContainerWidth);
+  margin: auto;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 998;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100vw;
+  transition: 0.6s;
+  right: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+  filter: blur(1.5rem);
+  &.show {
+    right: 0%;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 2.5%;
+  right: 5%;
+  z-index: 1000;
+}
+
+svg {
+  width: 30px;
+}
+
+button {
+  color: var(--white);
+  background-color: var(--primary-color);
+  border: none;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+button:hover,
+svg:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--primary-color) var(--lighter-bg-color);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--lighter-bg-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  border: 1px solid var(--lighter-bg-color);
+}
+
+.items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+  @media screen and (min-width: 450px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

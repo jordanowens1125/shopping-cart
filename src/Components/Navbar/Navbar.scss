@@ -1,0 +1,90 @@
+#nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  z-index: 10;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  svg {
+    width: 40px;
+    fill: white;
+    color: white;
+  }
+  .links {
+    position: fixed;
+    height: 100vh;
+    background-color: var(--lighter-bg-color);
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    right: -100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    width: 100vw;
+    transition: 0.6s;
+    max-width: var(--maxSideBarWidth);
+    &.show {
+      right: 0;
+    }
+  }
+  .modal {
+    left: 100%;
+    &.show {
+      left: 0;
+    }
+  }
+  @media screen and (min-width: 400px) {
+    .mobile {
+      display: none;
+    }
+    .links {
+      flex-direction: row;
+      position: static;
+      height: fit-content;
+      width: fit-content;
+      background-color: transparent;
+      z-index: unset;
+    }
+  }
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  padding: 10px;
+  color: inherit;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}
+
+.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.active:hover {
+  color: var(--white);
+}
+
+#shopping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}

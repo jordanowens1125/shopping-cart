@@ -1,15 +1,31 @@
-import React, {useContext, useState} from 'react'
-import {CartContext, CategoriesContext} from '../../Context/Context'
-import { NavLink } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import bars from '../../Assets/bars.svg'
-import './Navbar.css'
+import React, { useContext, useState } from "react";
+import { CartContext, CategoriesContext } from "../../Context/Context.tsx";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart.tsx";
+import "./Navbar.scss";
+import { text } from "stream/consumers";
 
 const Navbar = () => {
-  const cart = useContext(CartContext)
-  const categories = useContext(CategoriesContext)
+  const cart = useContext(CartContext);
+  const categories = useContext(CategoriesContext);
+  const links = [
+    {
+      to: "/",
+      text: "Home",
+    },
+    {
+      to: `/catalog/cars`,
+      text: "Cars",
+    },
+    {
+      to: `/catalog/suvs`,
+      text: "Suvs",
+    },
+  ];
 
   const [open, setOpen] = useState(false);
+  const [showCart, setShowCart] = useState(false);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -18,108 +34,67 @@ const Navbar = () => {
     setOpen(false);
   };
 
-  let count = cart.cart.length
-  
-  const showCart = () => {
-    const element = document.getElementById('cart')
-    element.classList.remove("cart-hide");
-    element.classList.add('cart-show')
-  }
+  let count = cart.cart.length;
 
   return (
     <>
       <nav id="nav">
-        <div id="mobile">
-          <svg
-            width="40px"
-            height="40px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            onClick={handleOpen}
-          >
-            <path
-              d="M19 12.75H5C4.80109 12.75 4.61032 12.671 4.46967 12.5303C4.32902 12.3897 4.25 12.1989 4.25 12C4.25 11.8011 4.32902 11.6103 4.46967 11.4697C4.61032 11.329 4.80109 11.25 5 11.25H19C19.1989 11.25 19.3897 11.329 19.5303 11.4697C19.671 11.6103 19.75 11.8011 19.75 12C19.75 12.1989 19.671 12.3897 19.5303 12.5303C19.3897 12.671 19.1989 12.75 19 12.75Z"
-              fill="currentColor"
-            />
-            <path
-              d="M19 8.25H5C4.80109 8.25 4.61032 8.17098 4.46967 8.03033C4.32902 7.88968 4.25 7.69891 4.25 7.5C4.25 7.30109 4.32902 7.11032 4.46967 6.96967C4.61032 6.82902 4.80109 6.75 5 6.75H19C19.1989 6.75 19.3897 6.82902 19.5303 6.96967C19.671 7.11032 19.75 7.30109 19.75 7.5C19.75 7.69891 19.671 7.88968 19.5303 8.03033C19.3897 8.17098 19.1989 8.25 19 8.25Z"
-              fill="currentColor"
-            />
-            <path
-              d="M19 17.25H5C4.80109 17.25 4.61032 17.171 4.46967 17.0303C4.32902 16.8897 4.25 16.6989 4.25 16.5C4.25 16.3011 4.32902 16.1103 4.46967 15.9697C4.61032 15.829 4.80109 15.75 5 15.75H19C19.1989 15.75 19.3897 15.829 19.5303 15.9697C19.671 16.1103 19.75 16.3011 19.75 16.5C19.75 16.6989 19.671 16.8897 19.5303 17.0303C19.3897 17.171 19.1989 17.25 19 17.25Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div
-            id="mobile-nav"
-            className={open ? "mobile-nav-show" : "mobile-nav-hide"}
-          >
-            <svg
-              fill="currentColor"
-              width="40px"
-              height="40px"
-              viewBox="0 0 32 32"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
+        <svg
+          width="40px"
+          height="40px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={handleOpen}
+          className="mobile"
+        >
+          <path
+            d="M19 12.75H5C4.80109 12.75 4.61032 12.671 4.46967 12.5303C4.32902 12.3897 4.25 12.1989 4.25 12C4.25 11.8011 4.32902 11.6103 4.46967 11.4697C4.61032 11.329 4.80109 11.25 5 11.25H19C19.1989 11.25 19.3897 11.329 19.5303 11.4697C19.671 11.6103 19.75 11.8011 19.75 12C19.75 12.1989 19.671 12.3897 19.5303 12.5303C19.3897 12.671 19.1989 12.75 19 12.75Z"
+            fill="currentColor"
+          />
+          <path
+            d="M19 8.25H5C4.80109 8.25 4.61032 8.17098 4.46967 8.03033C4.32902 7.88968 4.25 7.69891 4.25 7.5C4.25 7.30109 4.32902 7.11032 4.46967 6.96967C4.61032 6.82902 4.80109 6.75 5 6.75H19C19.1989 6.75 19.3897 6.82902 19.5303 6.96967C19.671 7.11032 19.75 7.30109 19.75 7.5C19.75 7.69891 19.671 7.88968 19.5303 8.03033C19.3897 8.17098 19.1989 8.25 19 8.25Z"
+            fill="currentColor"
+          />
+          <path
+            d="M19 17.25H5C4.80109 17.25 4.61032 17.171 4.46967 17.0303C4.32902 16.8897 4.25 16.6989 4.25 16.5C4.25 16.3011 4.32902 16.1103 4.46967 15.9697C4.61032 15.829 4.80109 15.75 5 15.75H19C19.1989 15.75 19.3897 15.829 19.5303 15.9697C19.671 16.1103 19.75 16.3011 19.75 16.5C19.75 16.6989 19.671 16.8897 19.5303 17.0303C19.3897 17.171 19.1989 17.25 19 17.25Z"
+            fill="currentColor"
+          />
+        </svg>
+        <ul className={open ? "links show" : "links"}>
+          {links.map((item) => (
+            <NavLink
+              key={item.text}
+              to={item.to}
+              className="link"
               onClick={handleClose}
             >
-              <title>cancel</title>
-              <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"></path>
-            </svg>
-            <ul>
-              <NavLink
-                to={"/"}
-                activeclassname="active"
-                className="link"
-                onClick={handleClose}
-              >
-                Home
-              </NavLink>
-              {categories.map((category) => (
-                <NavLink
-                  key={category}
-                  to={`/catalog/${category}`}
-                  activeclassname="active"
-                  className="link"
-                  onClick={handleClose}
-                >
-                  {category}
-                </NavLink>
-              ))}
-              <NavLink
-                to={"/About"}
-                activeclassname="active"
-                className="link"
-                onClick={handleClose}
-              >
-                About
-              </NavLink>
-            </ul>
-          </div>
-        </div>
-        <ul className="desktop">
-          <NavLink to={"/"} activeclassname="active" className="link">
-            Home
-          </NavLink>
-          {categories.map((category) => (
-            <NavLink
-              key={category}
-              to={`/catalog/${category}`}
-              activeclassname="active"
-              className="link"
-            >
-              <li>{category}</li>
+              {item.text}
             </NavLink>
           ))}
-          <NavLink to={"/About"} activeclassname="active" className="link">
-            About
-          </NavLink>
+          <svg
+            fill="currentColor"
+            width="40px"
+            height="40px"
+            viewBox="0 0 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={handleClose}
+            className="close mobile"
+          >
+            <title>cancel</title>
+            <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"></path>
+          </svg>
         </ul>
+        <div
+          className={open ? "modal show" : "modal"}
+          onClick={handleClose}
+        ></div>
+
         <div id="shopping">
-          <div id="nav-cart">
+          <div className="cart-icon">
             <svg
-              onClick={showCart}
+              onClick={() => setShowCart(true)}
               width="40px"
               height="40px"
               viewBox="0 0 24 24"
@@ -149,10 +124,12 @@ const Navbar = () => {
                 fill="currentColor"
               />
             </svg>
-            <div>
-              <p> {count} </p>
+            <div className="count">
+              {" "}
+              <p>{count}</p>{" "}
             </div>
           </div>
+
           <Link to={"/search"} className="link">
             <svg
               width="30px"
@@ -171,8 +148,9 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
+      <Cart showCart={showCart} count={count} setShowCart={setShowCart} />
     </>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

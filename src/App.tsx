@@ -1,17 +1,17 @@
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import { useState } from "react";
+import Catalog from "./Components/Catalog/Catalog.tsx";
+import "./App.scss";
+import Product from "./Pages/Product/Product.tsx";
 import {
-  createHashRouter,
-  RouterProvider,
-} from "react-router-dom";
-import {  useState } from "react";
-import Catalog from "./Components/Catalog/Catalog";
-import About from './Pages/About/About'
-import './App.css';
-import Product from './Pages/Product/Product';
-import {CartContext, ProductsProvider, CategoriesProvider} from "./Context/Context";
-import Home from './Pages/Home/Home';
-import Layout from "./Pages/Layout/Layout";
-import Checkout from './Pages/Checkout/Checkout'
-import Search from './Pages/Search/Search'
+  CartContext,
+  ProductsProvider,
+  CategoriesProvider,
+} from "./Context/Context.tsx";
+import Home from "./Pages/Home/Home.tsx";
+import Layout from "./Pages/Layout/Layout.tsx";
+import Checkout from "./Pages/Checkout/Checkout.tsx";
+import Search from "./Pages/Search/Search.tsx";
 
 const router = createHashRouter([
   {
@@ -21,10 +21,6 @@ const router = createHashRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
       },
       {
         path: "/catalog",
@@ -58,9 +54,7 @@ function App() {
       <CategoriesProvider>
         <ProductsProvider>
           <div className="App">
-          <RouterProvider router={router}>
-            
-          </RouterProvider>
+            <RouterProvider router={router}></RouterProvider>
           </div>
         </ProductsProvider>
       </CategoriesProvider>

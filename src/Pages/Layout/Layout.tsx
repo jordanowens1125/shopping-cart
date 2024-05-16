@@ -1,17 +1,15 @@
-import React from 'react'
+import React from "react";
 import { Outlet } from "react-router-dom";
-import Cart from '../../Components/Cart/Cart';
-import Navbar from '../../Components/Navbar/Navbar'
+import Navbar from "../../Components/Navbar/Navbar.tsx";
+import Notification from "../../Components/Notification/Notification.tsx";
 const Layout = () => {
   return (
     <>
       <Navbar />
-      <Cart />
-      <div id='Layout'>
-        <Outlet/>
-      </div>
+      <Notification />
+      <Outlet />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
