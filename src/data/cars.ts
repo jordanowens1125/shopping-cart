@@ -6,7 +6,7 @@ import cayman from "../Assets/car-images/Porsche_718_Cayman_GT4_RS_4.webp";
 import corvette from "../Assets/car-images/chevrolet_corvette_e_ray.jpg";
 import goldPlatedLambo from "../Assets/car-images/Gold_Plated_Lamborghini_Aventador.jpg";
 import huracan from '../Assets/car-images/huracan.webp'
-import jaguar from "../Assets/car-images/jaguar_f_type_2dr.jpg";
+// import jaguar from "../Assets/car-images/jaguar_f_type_2dr.jpg";
 import lexus from "../Assets/car-images/Lexus_LC_500_Inspiration_Series.webp";
 import mazda from "../Assets/car-images/mazda_mx_5_miata.jpg";
 import senna from "../Assets/car-images/McLaren_Senna.webp";

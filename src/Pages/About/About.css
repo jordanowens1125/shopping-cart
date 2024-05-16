@@ -4,8 +4,9 @@
     /* Source img  https://wallpaperaccess.com/full/1179614.jpg */
     background-size: cover;
     color: var(--white);
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+    padding-top: 90px;
 }
 
 #About div{

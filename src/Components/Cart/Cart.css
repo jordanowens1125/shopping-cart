@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     background-color: var(--lighter-bg-color);
     color: var(--white);
     transition: 1s;
@@ -25,7 +26,7 @@
 
 .cart-show{
     transition: 1s;
-    width: 25vw;
+    width: 20vw;
     padding-left: 20px;
 }
 
