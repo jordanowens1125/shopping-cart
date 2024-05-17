@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/Context.tsx";
 import "./Cart.scss";
+import LeftSvgComponent from "../../icons/left.tsx";
+import RightSvgComponent from "../../icons/right.tsx";
 
 const Cart = ({ showCart, count, setShowCart }) => {
   const cart = useContext(CartContext);
@@ -46,38 +48,47 @@ const Cart = ({ showCart, count, setShowCart }) => {
       ></div>
 
       <div id="cart" className={showCart ? "cart-show" : "cart-hide"}>
-        <span>Cart</span>
-        <div className="close" onClick={handleClose}>
-          <svg
-            fill="currentColor"
-            width="40px"
-            height="40px"
-            viewBox="0 0 32 32"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>cancel</title>
-            <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"></path>
-          </svg>
+        <div className="top">
+          <span>Cart</span>
+          <div className="close" onClick={handleClose}>
+            <svg
+              fill="currentColor"
+              width="40px"
+              height="40px"
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>cancel</title>
+              <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"></path>
+            </svg>
+          </div>
         </div>
 
         <div className="cart-info">
+          {cart.cart.length === 0 && (
+            <div className="empty">No Items In Cart</div>
+          )}
+
           <ul>
             {cart.cart.map((item, index) => (
-              <li key={index}>
-                <p>{item.title}</p>
+              <li key={index} className="cart-item">
+                <p className="title">{item.title}</p>
                 <p>
                   $ {item.price.toLocaleString("en", { useGrouping: true })}.00
                 </p>
                 <img src={item.image} alt={item.title} />
                 <div className="product-actions">
-                  <button onClick={() => updateItemQuantity(-1, index)}>
-                    Subtract
-                  </button>
-                  <span className="product-quantity">{item.quantity}</span>
-                  <button onClick={() => updateItemQuantity(1, index)}>
-                    Add
-                  </button>
+                  <span className="left">
+                    <button onClick={() => updateItemQuantity(-1, index)}>
+                      <LeftSvgComponent />
+                    </button>
+                    <span className="product-quantity">{item.quantity}</span>
+                    <button onClick={() => updateItemQuantity(1, index)}>
+                      <RightSvgComponent />
+                    </button>
+                  </span>
+
                   <svg
                     fill="currentColor"
                     width="40px"
@@ -94,6 +105,7 @@ const Cart = ({ showCart, count, setShowCart }) => {
               </li>
             ))}
           </ul>
+
           <div>
             Total: ${total.toLocaleString("en", { useGrouping: true })}.00
           </div>

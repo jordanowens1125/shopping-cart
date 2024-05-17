@@ -22,7 +22,7 @@ export const cars = [
     price: 51000,
     image: auditt,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://www.motortrend.com/uploads/2022/09/2023-Audi-TT-front-three-quarter-view-5.jpg",
   },
   {
@@ -31,7 +31,7 @@ export const cars = [
     price: 40000,
     image: blackchevcamaro,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://images.hdqwalls.com/wallpapers/black-chevrolet-camaro-ag.jpg",
   },
   {
@@ -40,7 +40,7 @@ export const cars = [
     price: 42000,
     image: bmwz4,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://cdn-ds.com/blogs-media/sites/641/2018/09/25080416/Photo-Gallery-of-the-2019-BMW-Z4-Interior-and-Exterior_o.jpg",
   },
   {
@@ -49,7 +49,7 @@ export const cars = [
     price: 1500000,
     image: bugatti_chiron,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://www.topgear.com/sites/default/files/2021/11/_Z3A7768.jpg",
   },
   {
@@ -58,7 +58,7 @@ export const cars = [
     price: 64000,
     image: cayman,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://www.motortrend.com/uploads/2021/11/2022-Porsche-718-Cayman-GT4-RS-4.jpg?fit=around%7C875:492.1875",
   },
   {
@@ -67,7 +67,7 @@ export const cars = [
     price: 550000,
     image: goldPlatedLambo,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://www.carscoops.com/wp-content/uploads/2015/01/Lambo-Gold-1.jpg",
   },
   {
@@ -76,7 +76,7 @@ export const cars = [
     price: 270000,
     image: huracan,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/huracan/evo/2022/10_06/over/hura_evo_over_01_m.jpg",
   },
   {
@@ -85,7 +85,7 @@ export const cars = [
     price: 105000,
     image: corvette,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2024-chevrolet-corvette-e-ray-3lz-012-1673977695.jpg?crop=0.591xw:0.786xh;0.162xw,0.214xh&resize=1200:*",
   },
   {
@@ -94,7 +94,7 @@ export const cars = [
     price: 96000,
     image: lexus,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "",
   },
   {
@@ -103,7 +103,7 @@ export const cars = [
     price: 30000,
     image: mazda,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://www.mazdausa.com/siteassets/vehicles/2023/mx-5-rf/build-and-price/trims/environmental-360s/club/jet-black/e360-my22-mx5-rf-club-jetblack-020.jpg",
   },
 
@@ -113,7 +113,7 @@ export const cars = [
     price: 120000,
     image: nissan,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://hips.hearstapps.com/hmg-prod/images/2023-nissan-gt-r-101-1671034165.jpg?crop=0.735xw:0.966xh;0.0163xw,0&resize=640:*",
   },
   {
@@ -122,7 +122,7 @@ export const cars = [
     price: 1350000,
     image: senna,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://mclaren.scene7.com/is/image/mclaren/Senna-Hero1920x1080:crop-16x9?wid=1980&hei=1114",
   },
   {
@@ -131,7 +131,7 @@ export const cars = [
     price: 30000,
     image: scion,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://doubleclutch.ca/wp-content/uploads/2015/02/DSC01041-1000x570.jpg",
   },
   {
@@ -140,7 +140,7 @@ export const cars = [
     price: 45000,
     image: supra,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2021/05/HERO-2022-Supra-A91-CF-Windtunnel.jpg",
   },
   {
@@ -149,7 +149,7 @@ export const cars = [
     price: 175000,
     image: turbo,
     details: "",
-    category: "cars",
+    category: "Cars",
     src: "https://www.motortrend.com/uploads/sites/5/2020/03/2021-Porsche-911-Turbo-S-Coupe-5.jpg",
   },
   //   { id: 15,

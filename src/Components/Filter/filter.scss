@@ -37,14 +37,27 @@
   .sort-by {
     grid-area: sort;
   }
-
+  .search {
+    grid-area: search;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+    input {
+      min-width: 300px;
+    }
+  }
   @media screen and (min-width: 476px) {
     display: grid;
-    grid-template-areas: "layouts categories sort";
-    grid-template-columns: 1fr auto auto;
+    grid-template-areas: "layouts search categories sort";
+    grid-template-columns: auto 1fr auto auto;
   }
-  //   @media screen and (min-width: 768px) {
-  //     display: grid;
-  //     grid-template-areas: "layouts categories sort price";
-  //   }
+  @media screen and (min-width: 1024px) {
+    .search {
+      display: flex;
+    }
+  }
 }

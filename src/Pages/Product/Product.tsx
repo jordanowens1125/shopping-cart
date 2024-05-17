@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ProductsContext, CartContext } from "../../Context/Context.tsx";
 import { useParams } from "react-router-dom";
-import "./Product.css";
+import NotFound from "../../Assets/not-found.jpg";
+import "./Product.scss";
 
 const Product = () => {
   const cart = useContext(CartContext);
@@ -9,56 +10,33 @@ const Product = () => {
   const products = [...items];
   const params = useParams();
   let id = params.id;
-
-  const product = products[id];
-
-  const checkIfItemInCart = (item) => {
-    //first see if you can find item in cart
-    let itemInCart = false;
-    for (let i = 0; i < cart.cart.length; i++) {
-      if (item.title === cart.cart[i].title) {
-        itemInCart = true;
-      }
+  const addToCart = cart.addToCart;
+  const [product, setProduct] = useState(
+    products.find((x) => x.id == id) || {
+      image: NotFound,
+      title: "Vehicle Not Found",
+      price: 0,
     }
-    return itemInCart;
-  };
-
-  const getItemInCart = (item) => {
-    //first see if you can find item in cart
-    for (let i = 0; i < cart.cart.length; i++) {
-      if (item.title === cart.cart[i].title) {
-        return i;
-      }
-    }
-  };
-
-  const showNotification = () => {};
-
+  );
   const addProduct = () => {
-    const updatedCart = [...cart.cart];
-    const itemInCart = checkIfItemInCart(product);
-    //if yes then just update that item quantity
-    if (itemInCart) {
-      //find item in cart to get the correct id
-      let index = getItemInCart(product);
-      cart.cart[index].quantity++;
-    } else {
-      //if no then add item to cart
-      const newItem = items[id];
-      newItem.quantity = 1;
-      updatedCart.push(newItem);
-    }
-    cart.setCart(updatedCart);
-    //show cart
-    showNotification();
+    addToCart(product);
   };
 
   return (
     <>
       <section>
         <div id="Product">
-          <img src={product.image} alt={product.title}></img>
-          <div className="Product-details">
+          <div className="left">
+            <img src={product.image} alt={product.title} className="showcase" />
+
+            <img src={product.image} alt={product.title} />
+            <img src={product.image} alt={product.title} />
+            <img src={product.image} alt={product.title} />
+            <img src={product.image} alt={product.title} />
+            <img src={product.image} alt={product.title} />
+          </div>
+
+          <div className="product-details">
             <h2>{product.title}</h2>
             <p>
               {/* {product.description} */}
@@ -73,7 +51,9 @@ const Product = () => {
             <p>
               ${product.price.toLocaleString("en", { useGrouping: true })}.00
             </p>
-            <button onClick={() => addProduct()}>Add To Cart</button>
+            {product && (
+              <button onClick={() => addProduct()}>Add To Cart</button>
+            )}
           </div>
         </div>
       </section>

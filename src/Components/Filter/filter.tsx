@@ -1,16 +1,39 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { MAXPRICE, MINPRICE } from "../../data/price-range.ts";
 import GridSvgComponent from "../../icons/grid.tsx";
 import RowSvgComponent from "../../icons/row.tsx";
 import Items from "../Item/Items.tsx";
 import "./filter.scss";
+import { CategoriesContext } from "../../Context/Context.tsx";
+import {
+  sortBy,
+  filterByCategory,
+  filterBySearch,
+  A,
+  Z,
+  LEAST,
+  GREATEST,
+} from "../../functions/functions.js";
 export default function Filter({ list }) {
   const [layout, setLayout] = useState(1);
-  const [price, setPrice] = useState(1);
-  const [category, setCategory] = useState(1);
-  const [sortBy, setSortBy] = useState(1);
+  const categories = useContext(CategoriesContext);
+  // const [price, setPrice] = useState(1);
+  const [category, setCategory] = useState(null);
+  const [sort, setSort] = useState(LEAST);
+  const [searchInput, setSearchInput] = useState("");
 
-  // sort list function
+  const handleInputChange = (e) => {
+    const value = e.currentTarget.value;
+    if (value.length < 25) {
+      setSearchInput(e.currentTarget.value);
+    }
+  };
+
+  const filteredItems = sortBy(
+    filterBySearch(filterByCategory(list, category), searchInput),
+    sort
+  );
+
   return (
     <>
       <div className="sort">
@@ -28,34 +51,59 @@ export default function Filter({ list }) {
             <RowSvgComponent />
           </div>
         </div>
-
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Seach Vehicles"
+            value={searchInput}
+            onChange={(e) => handleInputChange(e)}
+          />
+          <span>
+            "{searchInput === "" ? "All" : searchInput}" ({filteredItems.length}
+            )
+          </span>
+        </div>
         <div className="categories">
-          <label htmlFor="cars">Categories:</label>
+          <label htmlFor="category">Categories:</label>
 
-          <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+          <select
+            name="category"
+            onChange={(e) => setCategory(e.currentTarget.value)}
+          >
+            <option value={""}>All</option>
+            {categories.map((category) => (
+              <option value={category} key={category}>
+                {category}
+              </option>
+            ))}
           </select>
         </div>
 
         <div className="sort-by">
           <label htmlFor="sort-by">Sort By:</label>
 
-          <select name="sort-by" id="sort-by">
-            <option value="low">Price, low to high</option>
-            <option value="high">Price, high to low</option>
-            <option value="a">Alphabetically, A-Z</option>
-            <option value="z">Alphabetically, Z-A</option>
+          <select
+            name="sort-by"
+            id="sort-by"
+            onChange={(e) => setSort(e.currentTarget.value)}
+          >
+            <option value={LEAST}>Price, low to high</option>
+            <option value={GREATEST}>Price, high to low</option>
+            <option value={A}>Alphabetically, A-Z</option>
+            <option value={Z}>Alphabetically, Z-A</option>
           </select>
         </div>
 
         <div className="price">
-        <input type="range" min={MINPRICE} max={MAXPRICE} className="slider" />
+          <input
+            type="range"
+            min={MINPRICE}
+            max={MAXPRICE}
+            className="slider"
+          />
+        </div>
       </div>
-      </div>
-      <Items number={layout} items={list} />
+      <Items number={layout} items={filteredItems} />
     </>
   );
 }

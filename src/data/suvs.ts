@@ -12,7 +12,7 @@ export const suvs = [{
     price: 42000,
     image: pilot,
     details: "",
-    category: "suvs",
+    category: "Suvs",
     src: "https://www.autoparkhonda.com/static/brand-honda/vehicle/2021/Honda/Pilot/MRP/01.jpg",
   },
   {
@@ -21,7 +21,7 @@ export const suvs = [{
     price: 45000,
     image: runner,
     details: "",
-    category: "suvs",
+    category: "Suvs",
     src: "https://pressroom.toyota.com/the-adventurer-toyota-4runner-gains-new-safety-and-multimedia-tech-for-2020/",
   },
   {
@@ -30,7 +30,7 @@ export const suvs = [{
     price: 52000,
     image: lexusRX,
     details: "",
-    category: "suvs",
+    category: "Suvs",
     src: "https://www.edmunds.com/lexus/rx-350l/",
   },
   {
@@ -39,7 +39,7 @@ export const suvs = [{
     price: 42000,
     image: passport,
     details: "",
-    category: "suvs",
+    category: "Suvs",
     src: "https://www.motortrend.com/uploads/2021/12/2022-Honda-Passport-TrailSport-21.jpg?fit=around%7C875:492",
   },
   {
@@ -48,7 +48,7 @@ export const suvs = [{
     price: 32000,
     image: crosstrek,
     details: "",
-    category: "suvs",
+    category: "Suvs",
     src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFHH4REEtMAqGEZDv1cefRWdPJa8RrxLuPhieuXKYGpw&usqp=CAU&ec=48600113",
   },
   {
@@ -57,7 +57,7 @@ export const suvs = [{
     price: 39000,
     image: mazda,
     details: "",
-    category: "suvs",
+    category: "Suvs",
     src: "https://cdcssl.ibsrv.net/autodata/images/?img=CAD10MAS042A01300.jpg&width=397&height=298",
   },
   {
@@ -66,7 +66,7 @@ export const suvs = [{
     price: 27000,
     image: forester,
     details: "",
-    category: "suvs",
+    category: "Suvs",
     src: "https://www.kbb.com/wp-content/uploads/2023/01/2023-subaru-forester-front-left-3qtr.jpg",
   },
   
