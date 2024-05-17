@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../Context/Context.tsx";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Cart from "../Cart/Cart.tsx";
 import "./Navbar.scss";
 
