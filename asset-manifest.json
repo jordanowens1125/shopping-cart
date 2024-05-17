@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.4ff7a680.css",
-    "main.js": "/shopping-cart/static/js/main.c7854b32.js",
-    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "main.css": "/shopping-cart/static/css/main.b4a0978f.css",
+    "main.js": "/shopping-cart/static/js/main.e191e3d1.js",
     "static/media/black-chevrolet-camaro.jpg": "/shopping-cart/static/media/black-chevrolet-camaro.eb55ad4a3bcb858b1870.jpg",
     "static/media/BMW_Z4.jpg": "/shopping-cart/static/media/BMW_Z4.5ad8c8662db30bd8f3e7.jpg",
     "static/media/4runner.jpg": "/shopping-cart/static/media/4runner.37865a951a6dea7c515a.jpg",
@@ -19,21 +18,19 @@
     "static/media/pilot.webp": "/shopping-cart/static/media/pilot.c9fc3cdf7a8ca3e7ab9a.webp",
     "static/media/passport.webp": "/shopping-cart/static/media/passport.3174dee50b087902a912.webp",
     "static/media/Porsche_718_Cayman_GT4_RS_4.webp": "/shopping-cart/static/media/Porsche_718_Cayman_GT4_RS_4.f4f3e1198eb68271cfc9.webp",
-    "static/media/about-car.jpg": "/shopping-cart/static/media/about-car.10368a28a271b2d68c0d.jpg",
     "static/media/chevrolet_corvette_e_ray.jpg": "/shopping-cart/static/media/chevrolet_corvette_e_ray.743158af91f77c97d2d6.jpg",
     "static/media/bugatti_chiron.webp": "/shopping-cart/static/media/bugatti_chiron.8b1bf1e3b40172be1314.webp",
     "static/media/Lexus_RX.webp": "/shopping-cart/static/media/Lexus_RX.2c646b3943e610ed9661.webp",
     "static/media/nissan-gt-r.jpg": "/shopping-cart/static/media/nissan-gt-r.e0ee49cb5aa5d785547f.jpg",
     "static/media/home.avif": "/shopping-cart/static/media/home.ea55db899b66b55e7d8b.avif",
+    "static/media/not-found.jpg": "/shopping-cart/static/media/not-found.1748fcf7c90b5262acb0.jpg",
     "static/media/mazda_cx9.jpg": "/shopping-cart/static/media/mazda_cx9.24dcbfd49bf667f1be3a.jpg",
-    "static/media/bars.svg": "/shopping-cart/static/media/bars.b45f0e52a126f2c18bfcd2c301f2cd3d.svg",
     "index.html": "/shopping-cart/index.html",
-    "main.4ff7a680.css.map": "/shopping-cart/static/css/main.4ff7a680.css.map",
-    "main.c7854b32.js.map": "/shopping-cart/static/js/main.c7854b32.js.map",
-    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+    "main.b4a0978f.css.map": "/shopping-cart/static/css/main.b4a0978f.css.map",
+    "main.e191e3d1.js.map": "/shopping-cart/static/js/main.e191e3d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ff7a680.css",
-    "static/js/main.c7854b32.js"
+    "static/css/main.b4a0978f.css",
+    "static/js/main.e191e3d1.js"
   ]
 }
