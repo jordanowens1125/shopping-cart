@@ -77,7 +77,7 @@ const Cart = ({ showCart, count, setShowCart }) => {
                 <p>
                   $ {item.price.toLocaleString("en", { useGrouping: true })}.00
                 </p>
-                <img src={item.image} alt={item.title} />
+                <img src={item.images[0]} alt={item.title} />
                 <div className="product-actions">
                   <span className="left">
                     <button onClick={() => updateItemQuantity(-1, index)}>
@@ -110,9 +110,10 @@ const Cart = ({ showCart, count, setShowCart }) => {
             Total: ${total.toLocaleString("en", { useGrouping: true })}.00
           </div>
         </div>
-        <Link id="checkout-link" to={"/checkout"} onClick={handleClose}>
+        {/* <Link id="checkout-link" to={"/checkout"} onClick={handleClose}>
           Checkout
-        </Link>
+        </Link> */}
+        <p>Checkout</p>
       </div>
     </>
   );

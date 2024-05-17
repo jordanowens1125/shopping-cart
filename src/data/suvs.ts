@@ -1,82 +1,85 @@
-import runner from "../Assets/suv-images/4runner.jpg"
-import lexusRX from "../Assets/suv-images/Lexus_RX.webp";
-import forester from "../Assets/suv-images/forester.avif";
-import crosstrek from "../Assets/suv-images/crosstrek.jpg";
-import mazda from "../Assets/suv-images/mazda_cx9.jpg";
-import passport from "../Assets/suv-images/passport.webp";
-import pilot from "../Assets/suv-images/pilot.webp";
-
-export const suvs = [{
+export const suvs = [
+  {
     id: 15,
-    title: "Honda Pilot Carey",
+    title: "LAMBORGHINI URUS",
     price: 42000,
-    image: pilot,
     details: "",
     category: "Suvs",
-    src: "https://www.autoparkhonda.com/static/brand-honda/vehicle/2021/Honda/Pilot/MRP/01.jpg",
+    images: [
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/01-18-798x466.jpeg",
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/02-18-255x161.jpeg",
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/03-18-255x161.jpeg",
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/01-18-350x221.jpeg",
+    ],
   },
   {
     id: 16,
-    title: "Toyota 4Runner",
+    title: "LEXUS RX-350",
     price: 45000,
-    image: runner,
+
     details: "",
     category: "Suvs",
-    src: "https://pressroom.toyota.com/the-adventurer-toyota-4runner-gains-new-safety-and-multimedia-tech-for-2020/",
+    images: [
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/01-20-1-798x466.jpg",
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/02-20-1-255x161.jpg",
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/03-20-1-255x161.jpg",
+      "https://motors.stylemixthemes.com/elementor-dealer-two/wp-content/uploads/sites/24/2021/03/02-20-1-255x161.jpg",
+    ],
   },
   {
     id: 17,
-    title: "Lexus RX 350L",
+    title: "Acura RDX",
     price: 52000,
-    image: lexusRX,
+
     details: "",
     category: "Suvs",
-    src: "https://www.edmunds.com/lexus/rx-350l/",
+    images: [
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/34-798x466.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/54-255x148.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/43-255x143.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/14-255x161.jpg",
+    ],
   },
   {
     id: 18,
-    title: "Honda Passport",
+    title: "Chevrolet Suburban",
     price: 42000,
-    image: passport,
+
     details: "",
     category: "Suvs",
-    src: "https://www.motortrend.com/uploads/2021/12/2022-Honda-Passport-TrailSport-21.jpg?fit=around%7C875:492",
+    images: [
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2021/03/01-10-798x466.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2021/03/03-10-255x161.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2021/03/02-10-255x161.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2021/03/01-10-380x240.jpg",
+    ],
   },
   {
     id: 19,
-    title: "Subaru Crosstrek",
+    title: "Kia Soul",
     price: 32000,
-    image: crosstrek,
+
     details: "",
     category: "Suvs",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFHH4REEtMAqGEZDv1cefRWdPJa8RrxLuPhieuXKYGpw&usqp=CAU&ec=48600113",
+
+    images: [
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/314-798x466.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/414-255x159.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/Soul5-255x159.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/66-255x159.jpg",
+    ],
   },
   {
     id: 20,
-    title: "Mazda CX-9",
+    title: "Hyundai Veloster",
     price: 39000,
-    image: mazda,
-    details: "",
-    category: "Suvs",
-    src: "https://cdcssl.ibsrv.net/autodata/images/?img=CAD10MAS042A01300.jpg&width=397&height=298",
-  },
-  {
-    id:21,
-    title: "Subaru Forester",
-    price: 27000,
-    image: forester,
-    details: "",
-    category: "Suvs",
-    src: "https://www.kbb.com/wp-content/uploads/2023/01/2023-subaru-forester-front-left-3qtr.jpg",
-  },
-  
 
-  //   { id: 16,
-  //     title: "",
-  //     price: 0,
-  //     image : "",
-  //     details: "",
-  //     category: 'suvs',
-  //     src: "",
-  //   },
+    details: "",
+    images: [
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/71-798x466.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/2_1-255x154.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/212-255x154.jpg",
+      "https://motors.stylemixthemes.com/elementor-classified-four/wp-content/uploads/sites/25/2015/12/64-255x154.jpg",
+    ],
+  },
 ];

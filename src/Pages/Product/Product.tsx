@@ -11,15 +11,19 @@ const Product = () => {
   const params = useParams();
   let id = params.id;
   const addToCart = cart.addToCart;
-  const [product, setProduct] = useState(
-    products.find((x) => x.id == id) || {
-      image: NotFound,
-      title: "Vehicle Not Found",
-      price: 0,
-    }
-  );
+  const product = products.find((x) => x.id == id) || {
+    image: NotFound,
+    title: "Vehicle Not Found",
+    price: 0,
+    images: [],
+  };
+  const [image, setImage] = useState(product.images[0] || NotFound);
   const addProduct = () => {
     addToCart(product);
+  };
+
+  const handleImage = (e) => {
+    setImage(e.currentTarget.src);
   };
 
   return (
@@ -27,13 +31,28 @@ const Product = () => {
       <section>
         <div id="Product">
           <div className="left">
-            <img src={product.image} alt={product.title} className="showcase" />
-
-            <img src={product.image} alt={product.title} />
-            <img src={product.image} alt={product.title} />
-            <img src={product.image} alt={product.title} />
-            <img src={product.image} alt={product.title} />
-            <img src={product.image} alt={product.title} />
+            <img src={image} alt={product.title} className="showcase" />
+            <img
+              src={product.images[0]}
+              alt={product.title}
+              onClick={handleImage}
+              className={image === product.images[0] ? "active" : ""}
+            />
+            <img
+              src={product.images[1]}
+              alt={product.title}
+              onClick={handleImage}
+            />
+            <img
+              src={product.images[2]}
+              alt={product.title}
+              onClick={handleImage}
+            />
+            <img
+              src={product.images[3]}
+              alt={product.title}
+              onClick={handleImage}
+            />
           </div>
 
           <div className="product-details">
@@ -51,7 +70,7 @@ const Product = () => {
             <p>
               ${product.price.toLocaleString("en", { useGrouping: true })}.00
             </p>
-            {product && (
+            {product.title !== "Vehicle Not Found" && (
               <button onClick={() => addProduct()}>Add To Cart</button>
             )}
           </div>

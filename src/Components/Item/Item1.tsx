@@ -10,7 +10,7 @@ const Item = ({ item, addToCart }) => {
         style={{ textDecoration: "inherit" }}
         className="item"
       >
-        <img src={item.image} alt={item.title} style={{ objectFit: "cover" }} />
+        <img src={item.images[0]} alt={item.title} style={{ objectFit: "cover" }} />
       </Link>
       <div className="content">
         <h4>{item.title}</h4>

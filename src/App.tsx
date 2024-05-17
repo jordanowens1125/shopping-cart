@@ -11,6 +11,7 @@ import {
 import Home from "./Pages/Home/Home.tsx";
 import Layout from "./Pages/Layout/Layout.tsx";
 import Checkout from "./Pages/Checkout/Checkout.tsx";
+import NotFound from "./Pages/NotFound/notfound.tsx";
 import { cars } from "./data/cars.ts";
 import { suvs } from "./data/suvs.ts";
 
@@ -39,6 +40,10 @@ const router = createHashRouter([
         path: "/checkout",
         element: <Checkout />,
       },
+      {
+        path: '/*',
+        element:<NotFound/>
+      }
     ],
   },
 ]);

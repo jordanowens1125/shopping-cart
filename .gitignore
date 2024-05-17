@@ -1,12 +1,28 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 next features
-- Car page
-    Images that toggle image 4 images each
-Notification when cart is changed
-    item is added to cart
-404 page
+    Redesign app
+    Checkout page
+        For now it is disabled
+    Notification when cart is changed
+        item is added to cart
 
+References
+- Car Not Found 
+- 404 Page
+    https://gianlucajahn.github.io/react-ecommerce-store/ - click 404 page
+- Search
+    https://cardealer.potenzaglobalsolutions.com/electro-el/cars/
+    https://creativelayers.net/themes/boxcar-html/inventory-list-01.html#
+- Checkout
+    https://autocare.dexignlab.com/xhtml/shop-cart.html
+- Hero
+    https://duruthemes.com/demo/html/renax/light/#
+    https://creativelayers.net/themes/boxcar-html/index-6.html
+    https://gianlucajahn.github.io/react-ecommerce-store/
+    https://alex-dishen.github.io/game-harbor/
+- Car Page  
+    https://demo.vehica.com/listing/porsche-macan-2018-5-door-suv-blue/
 
 
 # dependencies
