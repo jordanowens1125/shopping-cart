@@ -1,0 +1,4 @@
+const MINPRICE = 50000;
+const MAXPRICE = 200000;
+
+export { MAXPRICE, MINPRICE };

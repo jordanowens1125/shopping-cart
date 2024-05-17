@@ -5,7 +5,7 @@
   --white: aliceblue;
   --primary-bg-color: #15161b;
   --lighter-bg-color: #2e3547;
-  --maxContainerWidth: 1200px;
+  --maxContainerWidth: 1440px;
   --navHeight: 60px;
   --maxSideBarWidth: 400px;
 }
@@ -30,6 +30,11 @@ body {
 #nav,
 #cart {
   overflow-x: hidden;
+}
+.App,
+body,
+#root {
+  position: relative;
 }
 
 nav {
@@ -122,25 +127,4 @@ a:-webkit-any-link {
   background-color: var(--primary-color);
   border-radius: 20px;
   border: 1px solid var(--lighter-bg-color);
-}
-
-.items {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 40px;
-  @media screen and (min-width: 450px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }

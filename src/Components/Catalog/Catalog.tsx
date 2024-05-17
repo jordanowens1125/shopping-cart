@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { ProductsContext } from "../../Context/Context.tsx";
-import { Link } from "react-router-dom";
 import "./Catalog.scss";
 import { useParams } from "react-router-dom";
-import Item from "../Item/Item.tsx";
+import Filter from "../Filter/filter.tsx";
 
 const Catalog = () => {
   const items = useContext(ProductsContext);
   const filter = useParams().category;
+  const [layoutnumber, setLayout] = useState(1);
   let filteredList = [...items];
   // const [sorted, setSort] = useState(false)
   const [leastToGreatest, setLeastToGreatest] = useState("default");
@@ -21,10 +21,6 @@ const Catalog = () => {
     }
     filteredList = newList;
   }
-
-  const handlePriceChange = (e) => {
-    setLeastToGreatest(e.currentTarget.value);
-  };
 
   //sort list
   if (leastToGreatest !== "default") {
@@ -42,26 +38,9 @@ const Catalog = () => {
   return (
     <section>
       <div id="Catalog">
-        <div id="sort">
-          <div id="price">
-            <label htmlFor="price">Sort:</label>
-            <select
-              name="cars"
-              id="cars"
-              value={leastToGreatest}
-              onChange={handlePriceChange}
-            >
-              <option value="default">Default</option>
-              <option value="least">Price: Lowest To Highest</option>
-              <option value="greatest">Price: Highest To Lowest</option>
-            </select>
-          </div>
-        </div>
-        <ul className="items">
-          {filteredList.map((item) => (
-            <Item item={item} key={item.id} />
-          ))}
-        </ul>
+        <Filter
+          list={filteredList}
+        />
       </div>
     </section>
   );

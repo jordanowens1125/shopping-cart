@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./Search.css";
 import { ProductsContext } from "../../Context/Context.tsx";
-import Item from "../../Components/Item/Item.tsx";
-import { Link } from "react-router-dom";
+import Items from "../../Components/Item/Items.tsx";
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -27,11 +26,7 @@ const Search = () => {
           "{searchInput === "" ? "All" : searchInput}" ({filteredItems.length})
         </span>
       </div>
-      <ul className="items">
-        {filteredItems.map((item) => {
-          return <Item item={item} key={item.id} />;
-        })}
-      </ul>
+      <Items number={1} items={filteredItems} />
     </section>
   );
 };
