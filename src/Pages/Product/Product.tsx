@@ -42,16 +42,19 @@ const Product = () => {
               src={product.images[1]}
               alt={product.title}
               onClick={handleImage}
+              className={image === product.images[1] ? "active" : ""}
             />
             <img
               src={product.images[2]}
               alt={product.title}
               onClick={handleImage}
+              className={image === product.images[2] ? "active" : ""}
             />
             <img
               src={product.images[3]}
               alt={product.title}
               onClick={handleImage}
+              className={image === product.images[3] ? "active" : ""}
             />
           </div>
 
